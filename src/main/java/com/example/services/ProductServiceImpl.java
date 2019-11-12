@@ -2,6 +2,7 @@ package com.example.services;
 
 import com.example.domain.DomainObject;
 import com.example.domain.Product;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -11,6 +12,7 @@ import java.util.*;
     //Alt j copies all with the same name
 
     @Service
+    @Profile("map")
     public class ProductServiceImpl extends AbstractMapService implements ProductService {
 
         @Override
